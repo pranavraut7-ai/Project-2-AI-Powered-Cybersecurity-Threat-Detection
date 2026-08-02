@@ -305,4 +305,298 @@ If everything is configured correctly, the project will automatically:
 - Author
 - Acknowledgements
 
+# 🚀 Usage
 
+The project provides three execution modes.
+
+---
+
+## Option 1 — Project Launcher
+
+Run the complete application using:
+
+```bash
+python main.py
+```
+
+The launcher displays:
+
+```
+============================================================
+ AI Powered Cybersecurity Threat Detection System
+============================================================
+
+1. Train Model
+
+2. Detect Threat
+
+3. Exit
+```
+
+---
+
+## Option 2 — Train Models
+
+Execute:
+
+```bash
+python train.py
+```
+
+This performs:
+
+- Data Loading
+- Data Cleaning
+- Feature Engineering
+- Model Training
+- Model Evaluation
+- Best Model Selection
+- Report Generation
+
+Generated artifacts include:
+
+```
+models/
+```
+
+- Best Model
+- Random Forest
+- Decision Tree
+- Logistic Regression
+- Extra Trees
+- Label Encoder
+- Feature Scaler
+
+Reports are generated inside:
+
+```
+outputs/reports/
+```
+
+---
+
+## Option 3 — Threat Detection
+
+Run:
+
+```bash
+python detect.py
+```
+
+The application loads the trained model and predicts threats using processed network traffic.
+
+Generated alerts are saved in:
+
+```
+outputs/predictions/
+```
+
+---
+
+# 🔄 Project Workflow
+
+```
+                CICIDS2017 Dataset
+                         │
+                         ▼
+                  Dataset Loading
+                         │
+                         ▼
+                   Data Cleaning
+                         │
+                         ▼
+                Feature Engineering
+                         │
+                         ▼
+                 Feature Scaling
+                         │
+                         ▼
+                 Train/Test Split
+                         │
+                         ▼
+             Machine Learning Models
+                         │
+                         ▼
+                Model Evaluation
+                         │
+                         ▼
+              Best Model Selection
+                         │
+                         ▼
+                 Threat Prediction
+                         │
+                         ▼
+              Threat Severity Engine
+                         │
+                         ▼
+                Security Alerts
+```
+
+---
+
+# 📈 Model Performance
+
+The trained models were evaluated using weighted classification metrics.
+
+| Model | Accuracy | Precision | Recall | F1 Score |
+|--------|---------:|----------:|-------:|---------:|
+| Logistic Regression | 0.9779 | 0.9780 | 0.9779 | 0.9780 |
+| Decision Tree | 0.9981 | 0.9981 | 0.9981 | 0.9981 |
+| **Random Forest** ⭐ | **0.9987** | **0.9986** | **0.9987** | **0.9986** |
+| Extra Trees | 0.9980 | 0.9980 | 0.9980 | 0.9979 |
+
+---
+
+# 🏆 Best Performing Model
+
+After evaluating all trained classifiers,
+
+**Random Forest Classifier** achieved the highest weighted F1 Score and was automatically selected as the production model.
+
+The trained model is saved locally for future inference using Joblib serialization.
+
+---
+
+# 📁 Generated Outputs
+
+During execution the project automatically creates:
+
+```
+models/
+```
+
+- Best Model
+- Individual Trained Models
+- Feature Scaler
+- Label Encoder
+
+```
+outputs/reports/
+```
+
+- Model Comparison
+- Classification Reports
+- Confusion Matrices
+
+```
+outputs/predictions/
+```
+
+- Security Alerts
+- Threat Predictions
+
+---
+
+# 🔐 Threat Severity Levels
+
+The prediction engine assigns severity levels based on attack category.
+
+| Attack Type | Severity |
+|-------------|-----------|
+| BENIGN | Low |
+| PortScan | Medium |
+| Bot | High |
+| FTP-Patator | High |
+| SSH-Patator | High |
+| Web Attack | High |
+| DoS | Critical |
+| DDoS | Critical |
+| Heartbleed | Critical |
+| Infiltration | Critical |
+
+---
+
+# 📋 Current Project Status
+
+| Module | Status |
+|---------|--------|
+| Dataset Loading | ✅ |
+| Data Cleaning | ✅ |
+| Feature Engineering | ✅ |
+| Model Training | ✅ |
+| Model Evaluation | ✅ |
+| Best Model Selection | ✅ |
+| Threat Detection | ✅ |
+| Severity Classification | ✅ |
+| Alert Generation | ✅ |
+| Documentation | ✅ |
+
+---
+
+# 🚀 Future Improvements
+
+Future enhancements planned for this project include:
+
+- Streamlit Dashboard
+- Real-Time Packet Capture
+- Deep Learning Models
+- XGBoost Integration
+- LightGBM Integration
+- Explainable AI (SHAP/LIME)
+- Docker Deployment
+- REST API Development
+- Cloud Deployment
+- SIEM Integration
+- Real-Time Intrusion Detection
+- Automated Threat Intelligence Integration
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+If you would like to improve this project:
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Commit your changes.
+4. Open a Pull Request.
+
+---
+
+# 📜 License
+
+This project is distributed under the MIT License.
+
+See the LICENSE file for additional details.
+
+---
+
+# 🙋 Author
+
+**Pranav Raut**
+
+Electrical Engineering Graduate
+
+AI • Machine Learning • Data Analytics • Industrial Automation
+
+GitHub:
+
+https://github.com/pranavraut7-ai
+
+---
+
+# ⭐ Support
+
+If you found this project useful:
+
+- Star the repository
+- Share feedback
+- Suggest improvements
+- Connect for collaboration
+
+---
+
+# 🙏 Acknowledgements
+
+- Canadian Institute for Cybersecurity (CIC)
+- Scikit-learn Community
+- Pandas Development Team
+- NumPy Development Team
+- Python Software Foundation
+- Open Source Community
+
+---
+
+**Thank you for visiting this repository.**
