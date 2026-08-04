@@ -1,120 +1,137 @@
-# 🛡️ AI-Powered Cybersecurity Threat Detection System
+# AI-Powered Cybersecurity Threat Detection System
 
-An end-to-end Machine Learning project that simulates a **Security Operations Center (SOC)** workflow by detecting malicious network traffic using the **CICIDS2017** cybersecurity dataset.
+An end-to-end Machine Learning project for detecting and classifying network intrusions using the **CICIDS2017** dataset. The project implements a complete cybersecurity detection pipeline, including data preprocessing, feature engineering, model training, evaluation, threat prediction, severity assessment, automated reporting, and visualization.
 
-> 🚧 **Project Status:** Active Development
-
----
-
-# 📌 Overview
-
-Cyberattacks are increasing in both frequency and sophistication, making automated threat detection a critical requirement for modern organizations.
-
-This project demonstrates a complete machine learning pipeline capable of identifying malicious network activities from network traffic data. The system performs data preprocessing, feature engineering, model training, evaluation, threat prediction, severity analysis, and alert generation in a modular and scalable architecture.
-
-The project has been designed following industry-level software engineering practices with clean code organization, reusable modules, logging support, documentation, and model persistence.
+Designed as a portfolio-quality project, it demonstrates the practical application of machine learning techniques for network security while following a modular and maintainable software architecture.
 
 ---
 
-# 🎯 Objectives
+## Project Overview
 
-The primary objectives of this project are:
+Modern organizations generate massive volumes of network traffic every day, making manual threat analysis inefficient and error-prone. This project automates the detection of malicious network activities by training multiple machine learning models and selecting the best-performing classifier based on evaluation metrics.
 
-- Build a complete cybersecurity threat detection pipeline.
-- Perform preprocessing on raw network traffic datasets.
-- Engineer machine-learning-ready features.
-- Train and compare multiple classification models.
-- Automatically select the best-performing model.
-- Predict threats using unseen network traffic.
-- Generate severity levels and alerts.
-- Produce evaluation reports and visualizations.
-- Maintain a modular, production-ready codebase.
+The workflow covers the complete lifecycle of an ML-based cybersecurity solution:
 
----
-
-# ✨ Features
-
-- Automated dataset loading
-- Data cleaning and preprocessing
-- Feature engineering pipeline
-- Label encoding
-- Feature scaling
-- Train/Test split
-- Multiple Machine Learning models
-- Automatic best model selection
-- Threat prediction
-- Threat severity classification
-- Alert generation
-- Evaluation reports
-- Confusion matrix generation
-- Model persistence using Joblib
-- Professional logging system
-- Modular project architecture
+- Data Loading
+- Data Cleaning
+- Feature Engineering
+- Model Training
+- Model Evaluation
+- Best Model Selection
+- Threat Detection
+- Severity Assessment
+- Alert Generation
+- Visualization
+- Report Generation
 
 ---
 
-# 🧠 Machine Learning Models
+## Key Features
 
-The project currently trains and evaluates the following algorithms:
-
-- Logistic Regression
-- Decision Tree
-- Random Forest ⭐ (Best Model)
-- Extra Trees
-
-Each model is evaluated using standard classification metrics before selecting the best-performing model.
+- End-to-end machine learning pipeline
+- Network intrusion detection using the CICIDS2017 dataset
+- Automated preprocessing and feature engineering
+- Multiple machine learning algorithms for performance comparison
+- Automatic best model selection using Weighted F1 Score
+- Threat prediction on unseen network traffic
+- Severity classification (Low, Medium, High, Critical)
+- Risk score calculation for detected threats
+- Automated report generation
+- Visualization of model performance and detection results
+- Modular and scalable project structure
 
 ---
 
-# 🛠 Technology Stack
+## System Architecture
 
-### Programming Language
+<p align="center">
+  <img src="assets/architecture/Architecture Overview_AI-Powered Cybersecurity Threat Detection System.png"
+       alt="System Architecture"
+       width="100%">
+</p>
 
-- Python 3.12
+The architecture is divided into four major stages:
+
+### Data Pipeline
+- Load CICIDS2017 dataset
+- Clean missing values and duplicates
+- Feature engineering and preprocessing
 
 ### Machine Learning
+- Train multiple classification models
+- Evaluate model performance
+- Select the best-performing model
 
-- Scikit-learn
+### Detection
+- Predict network threats
+- Assess severity level
+- Generate alerts with risk scores
 
-### Data Processing
-
-- Pandas
-- NumPy
-
-### Visualization
-
-- Matplotlib
-
-### Model Persistence
-
-- Joblib
-
-### Development Environment
-
-- Visual Studio Code
-
-### Version Control
-
-- Git
-- GitHub
+### Reporting
+- Generate evaluation reports
+- Produce visualizations
+- Save prediction logs
 
 ---
 
-# 📂 Project Structure
+## Project Workflow
 
 ```
-Project-2-AI-Powered-Cybersecurity-Threat-Detection/
+CICIDS2017 Dataset
+        │
+        ▼
+Data Loading
+        │
+        ▼
+Data Cleaning
+        │
+        ▼
+Feature Engineering
+        │
+        ▼
+Train Multiple ML Models
+        │
+        ▼
+Model Evaluation
+        │
+        ▼
+Best Model Selection
+        │
+        ▼
+Threat Detection
+        │
+        ▼
+Severity Assessment
+        │
+        ▼
+Alert Generation
+        │
+        ▼
+Visualizations & Reports
+```
+
+---
+
+## Project Structure
+
+```text
+AI-Powered-Cybersecurity-Threat-Detection/
 │
 ├── assets/
+│   ├── architecture/
+│   └── screenshots/
 │
-├── docs/
-│   ├── architecture.md
-│   ├── dataset.md
-│   ├── interview-guide.md
-│   └── workflow.md
+├── data/
+│   ├── external/
+│   ├── processed/
+│   └── raw/
 │
-├── notebooks/
-│   └── EDA.ipynb
+├── models/
+│
+├── outputs/
+│   ├── predictions/
+│   ├── reports/
+│   └── visualizations/
 │
 ├── src/
 │   ├── detection/
@@ -124,138 +141,65 @@ Project-2-AI-Powered-Cybersecurity-Threat-Detection/
 │   ├── utils/
 │   └── visualization/
 │
-├── data/
-│   └── raw/
-│
-├── outputs/
-│
 ├── detect.py
 ├── train.py
 ├── main.py
 ├── requirements.txt
-├── README.md
-└── LICENSE
+├── LICENSE
+├── CHANGELOG.md
+└── README.md
 ```
 
 ---
 
-# 🏗 Project Architecture
+## Technology Stack
 
-```
-                    Raw Dataset
-                         │
-                         ▼
-                  Dataset Loader
-                         │
-                         ▼
-                  Data Cleaning
-                         │
-                         ▼
-               Feature Engineering
-                         │
-                         ▼
-                  Model Training
-                         │
-                         ▼
-                 Model Evaluation
-                         │
-                         ▼
-                 Best Model Saved
-                         │
-                         ▼
-                 Threat Prediction
-                         │
-                         ▼
-               Severity Classification
-                         │
-                         ▼
-                  Alert Generation
-```
+| Category | Technologies |
+|----------|--------------|
+| Programming Language | Python |
+| Data Processing | Pandas, NumPy |
+| Machine Learning | Scikit-learn |
+| Visualization | Matplotlib |
+| Model Serialization | Joblib |
+| Dataset | CICIDS2017 |
 
 ---
 
-# 📊 Dataset
+## Installation
 
-This project uses the **CICIDS2017** dataset developed by the **Canadian Institute for Cybersecurity (CIC)**.
-
-The dataset contains realistic network traffic collected under both normal and malicious conditions, making it suitable for intrusion detection research and machine learning applications.
-
-For repository size optimization, the dataset is **not included** in this repository.
-
----
-
-# 📥 Dataset Setup
-
-Download the CICIDS2017 Machine Learning CSV files from the official CIC website or another trusted mirror.
-
-Place all CSV files inside:
-
-```
-data/raw/
-```
-
-Example:
-
-```
-data/
-└── raw/
-    ├── Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv
-    ├── Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv
-    ├── Friday-WorkingHours-Morning.pcap_ISCX.csv
-    ├── Monday-WorkingHours.pcap_ISCX.csv
-    ├── Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv
-    ├── Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv
-    ├── Tuesday-WorkingHours.pcap_ISCX.csv
-    └── Wednesday-workingHours.pcap_ISCX.csv
-```
-
----
-
-# ⚙ Installation
-
-## 1. Clone the Repository
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/pranavraut7-ai/Project-2-AI-Powered-Cybersecurity-Threat-Detection.git
+git clone https://github.com/<your-username>/AI-Powered-Cybersecurity-Threat-Detection.git
+
+cd AI-Powered-Cybersecurity-Threat-Detection
 ```
 
 ---
 
-## 2. Navigate to the Project
-
-```bash
-cd Project-2-AI-Powered-Cybersecurity-Threat-Detection
-```
-
----
-
-## 3. Create Virtual Environment
-
-Windows
+### 2. Create a Virtual Environment
 
 ```bash
 python -m venv .venv
 ```
 
----
+Activate the virtual environment.
 
-## 4. Activate Virtual Environment
+**Windows**
 
-PowerShell
-
-```powershell
-.venv\Scripts\Activate.ps1
-```
-
-Command Prompt
-
-```cmd
+```bash
 .venv\Scripts\activate
 ```
 
+**Linux / macOS**
+
+```bash
+source .venv/bin/activate
+```
+
 ---
 
-## 5. Install Dependencies
+### 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -263,340 +207,220 @@ pip install -r requirements.txt
 
 ---
 
-## 6. Download the Dataset
+## Dataset
 
-Copy all CICIDS2017 CSV files into:
+This project uses the **CICIDS2017** network intrusion detection dataset.
 
+Place the dataset inside the appropriate directory before training:
+
+```text
+data/
+└── raw/
 ```
-data/raw/
-```
+
+The preprocessing pipeline automatically performs:
+
+- Missing value handling
+- Duplicate removal
+- Feature encoding
+- Feature scaling
+- Feature selection
+- Dataset preparation for training
 
 ---
 
-## 7. Verify Installation
+## Model Training
 
-Run:
-
-```bash
-python main.py
-```
-
-If everything is configured correctly, the project will automatically:
-
-- Load all dataset files
-- Merge datasets
-- Clean the data
-- Perform feature engineering
-- Train machine learning models
-- Evaluate model performance
-- Save the best-performing model
-
----
-
-➡️ **Part 2 will continue from here with:**
-- Usage Guide
-- CLI Menu
-- Training Workflow
-- Detection Workflow
-- Results & Performance
-- Future Scope
-- Contributing
-- License
-- Author
-- Acknowledgements
-
-# 🚀 Usage
-
-The project provides three execution modes.
-
----
-
-## Option 1 — Project Launcher
-
-Run the complete application using:
-
-```bash
-python main.py
-```
-
-The launcher displays:
-
-```
-============================================================
- AI Powered Cybersecurity Threat Detection System
-============================================================
-
-1. Train Model
-
-2. Detect Threat
-
-3. Exit
-```
-
----
-
-## Option 2 — Train Models
-
-Execute:
+Train all machine learning models using:
 
 ```bash
 python train.py
 ```
 
-This performs:
+During execution, the pipeline:
 
-- Data Loading
-- Data Cleaning
-- Feature Engineering
-- Model Training
-- Model Evaluation
-- Best Model Selection
-- Report Generation
+- Loads and preprocesses the dataset
+- Trains multiple machine learning models
+- Evaluates each model
+- Selects the best-performing model
+- Saves trained models
+- Generates evaluation reports
+- Creates visualizations
 
-Generated artifacts include:
+The trained models are saved in:
 
-```
+```text
 models/
-```
-
-- Best Model
-- Random Forest
-- Decision Tree
-- Logistic Regression
-- Extra Trees
-- Label Encoder
-- Feature Scaler
-
-Reports are generated inside:
-
-```
-outputs/reports/
 ```
 
 ---
 
-## Option 3 — Threat Detection
+## Threat Detection
 
-Run:
+Run threat detection using:
 
 ```bash
 python detect.py
 ```
 
-The application loads the trained model and predicts threats using processed network traffic.
+The detection pipeline:
 
-Generated alerts are saved in:
+- Loads the saved best model
+- Predicts network traffic classes
+- Calculates severity levels
+- Computes risk scores
+- Generates alert logs
+- Saves prediction results
 
-```
+Prediction outputs are stored in:
+
+```text
 outputs/predictions/
 ```
 
 ---
 
-# 🔄 Project Workflow
+## Generated Outputs
 
-```
-                CICIDS2017 Dataset
-                         │
-                         ▼
-                  Dataset Loading
-                         │
-                         ▼
-                   Data Cleaning
-                         │
-                         ▼
-                Feature Engineering
-                         │
-                         ▼
-                 Feature Scaling
-                         │
-                         ▼
-                 Train/Test Split
-                         │
-                         ▼
-             Machine Learning Models
-                         │
-                         ▼
-                Model Evaluation
-                         │
-                         ▼
-              Best Model Selection
-                         │
-                         ▼
-                 Threat Prediction
-                         │
-                         ▼
-              Threat Severity Engine
-                         │
-                         ▼
-                Security Alerts
-```
+After training and detection, the project automatically generates the following outputs.
 
----
+### Models
 
-# 📈 Model Performance
-
-The trained models were evaluated using weighted classification metrics.
-
-| Model | Accuracy | Precision | Recall | F1 Score |
-|--------|---------:|----------:|-------:|---------:|
-| Logistic Regression | 0.9779 | 0.9780 | 0.9779 | 0.9780 |
-| Decision Tree | 0.9981 | 0.9981 | 0.9981 | 0.9981 |
-| **Random Forest** ⭐ | **0.9987** | **0.9986** | **0.9987** | **0.9986** |
-| Extra Trees | 0.9980 | 0.9980 | 0.9980 | 0.9979 |
-
----
-
-# 🏆 Best Performing Model
-
-After evaluating all trained classifiers,
-
-**Random Forest Classifier** achieved the highest weighted F1 Score and was automatically selected as the production model.
-
-The trained model is saved locally for future inference using Joblib serialization.
-
----
-
-# 📁 Generated Outputs
-
-During execution the project automatically creates:
-
-```
+```text
 models/
+├── best_model.pkl
+├── DecisionTree.pkl
+├── ExtraTrees.pkl
+├── LogisticRegression.pkl
+├── RandomForest.pkl
+├── scaler.pkl
+└── label_encoder.pkl
 ```
 
-- Best Model
-- Individual Trained Models
-- Feature Scaler
-- Label Encoder
+---
 
-```
+### Reports
+
+```text
 outputs/reports/
 ```
 
+Includes:
+
+- Project Summary
+- Model Summary
+- Detection Summary
 - Model Comparison
 - Classification Reports
 - Confusion Matrices
 
+---
+
+### Visualizations
+
+```text
+outputs/visualizations/
 ```
-outputs/predictions/
-```
 
-- Security Alerts
-- Threat Predictions
+Generated visualizations include:
 
----
-
-# 🔐 Threat Severity Levels
-
-The prediction engine assigns severity levels based on attack category.
-
-| Attack Type | Severity |
-|-------------|-----------|
-| BENIGN | Low |
-| PortScan | Medium |
-| Bot | High |
-| FTP-Patator | High |
-| SSH-Patator | High |
-| Web Attack | High |
-| DoS | Critical |
-| DDoS | Critical |
-| Heartbleed | Critical |
-| Infiltration | Critical |
+- Model Comparison
+- Confusion Matrix
+- Feature Importance (supported models)
+- Threat Distribution
+- Severity Distribution
+- Risk Score Distribution
+- Alert Timeline
 
 ---
 
-# 📋 Current Project Status
+## Project Screenshots
 
-| Module | Status |
-|---------|--------|
-| Dataset Loading | ✅ |
-| Data Cleaning | ✅ |
-| Feature Engineering | ✅ |
-| Model Training | ✅ |
-| Model Evaluation | ✅ |
-| Best Model Selection | ✅ |
-| Threat Detection | ✅ |
-| Severity Classification | ✅ |
-| Alert Generation | ✅ |
-| Documentation | ✅ |
+### System Architecture
+
+<p align="center">
+<img src="assets/architecture/Architecture Overview_AI-Powered Cybersecurity Threat Detection System.png" width="100%">
+</p>
 
 ---
 
-# 🚀 Future Improvements
+### Training Pipeline
 
-Future enhancements planned for this project include:
-
-- Streamlit Dashboard
-- Real-Time Packet Capture
-- Deep Learning Models
-- XGBoost Integration
-- LightGBM Integration
-- Explainable AI (SHAP/LIME)
-- Docker Deployment
-- REST API Development
-- Cloud Deployment
-- SIEM Integration
-- Real-Time Intrusion Detection
-- Automated Threat Intelligence Integration
+<p align="center">
+<img src="assets/screenshots/training_pipeline.png" width="100%">
+</p>
 
 ---
 
-# 🤝 Contributing
+### Model Comparison
 
-Contributions are welcome.
-
-If you would like to improve this project:
-
-1. Fork the repository.
-2. Create a feature branch.
-3. Commit your changes.
-4. Open a Pull Request.
+<p align="center">
+<img src="assets/screenshots/model_comparison.png" width="80%">
+</p>
 
 ---
 
-# 📜 License
+### Confusion Matrix
 
-This project is distributed under the MIT License.
-
-See the LICENSE file for additional details.
+<p align="center">
+<img src="assets/screenshots/confusion_matrix.png" width="80%">
+</p>
 
 ---
 
-# 🙋 Author
+### Reports
+
+<p align="center">
+<img src="assets/screenshots/reports_folder.png" width="100%">
+</p>
+
+---
+
+### Project Structure
+
+<p align="center">
+<img src="assets/screenshots/project_structure.png" width="100%">
+</p>
+
+---
+
+## Future Improvements
+
+Possible future enhancements include:
+
+- Deep Learning-based intrusion detection
+- Real-time packet capture integration
+- REST API deployment
+- Docker containerization
+- Streamlit web dashboard
+- Cloud deployment
+- Explainable AI (XAI) integration
+- SIEM integration
+- Automated model retraining
+- CI/CD pipeline for continuous deployment
+
+---
+
+## License
+
+This project is licensed under the **MIT License**.
+
+See the **LICENSE** file for details.
+
+---
+
+## Author
 
 **Pranav Raut**
 
-Electrical Engineering Graduate
+Electrical Engineer | AI & Machine Learning Enthusiast
 
-AI • Machine Learning • Data Analytics • Industrial Automation
-
-GitHub:
-
+GitHub:  
 https://github.com/pranavraut7-ai
 
----
-
-# ⭐ Support
-
-If you found this project useful:
-
-- Star the repository
-- Share feedback
-- Suggest improvements
-- Connect for collaboration
+LinkedIn:  
+https://www.linkedin.com/in/pranavraut-ee/
 
 ---
 
-# 🙏 Acknowledgements
-
-- Canadian Institute for Cybersecurity (CIC)
-- Scikit-learn Community
-- Pandas Development Team
-- NumPy Development Team
-- Python Software Foundation
-- Open Source Community
-
----
-
-**Thank you for visiting this repository.**
+If you found this project useful, consider giving it a ⭐ on GitHub.
