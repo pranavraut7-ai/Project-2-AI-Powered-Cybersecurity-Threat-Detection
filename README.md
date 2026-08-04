@@ -45,7 +45,7 @@ The workflow covers the complete lifecycle of an ML-based cybersecurity solution
 ## System Architecture
 
 <p align="center">
-  <img src="assets/architecture/Architecture Overview_AI-Powered Cybersecurity Threat Detection System.png"
+  <img src="assets/architecture/system_architecture.png"
        alt="System Architecture"
        width="100%">
 </p>
@@ -339,7 +339,9 @@ Generated visualizations include:
 ### System Architecture
 
 <p align="center">
-<img src="assets/architecture/Architecture Overview_AI-Powered Cybersecurity Threat Detection System.png" width="100%">
+  <img src="assets/architecture/system_architecture.png"
+       alt="System Architecture"
+       width="100%">
 </p>
 
 ---
